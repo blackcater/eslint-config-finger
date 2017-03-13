@@ -18,6 +18,13 @@ module.exports = {
     "no-invalid-this": 0,
     "no-proto": 0,
     "no-script-url": 1,
+    // ---- Node.js and CommonJS ----
+    "callback-return": 2,
+    "global-require:": 0,
+    "handle-callback-err": 2,
+    "no-mixed-requires": 2,
+    "no-new-require": 2,
+    "no-path-concat": 0,
 
     "no-restricted-syntax":[
       "error",

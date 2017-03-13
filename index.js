@@ -107,6 +107,14 @@ module.exports = {
     // "no-undef-init": 2,
     "no-undefined": 2,
     "no-use-before-define": 2,
+    // ---- Node.js and CommonJS ----
+    "callback-return": 2,
+    "global-require:": 0,
+    "handle-callback-err": 2,
+    "no-mixed-requires": 2,
+    "no-new-require": 2,
+    "no-path-concat": 2,
+    // Stylistic Issues
 
     "no-restricted-syntax":[
       "error",
