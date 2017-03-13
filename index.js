@@ -1,5 +1,5 @@
 /**
- * normal configuration for javascript
+ * Normal configuration for javascript
  * 
  * 0: "off"
  * 1: "warn"
@@ -21,16 +21,17 @@ module.exports = {
   },
   "rules": {
     // ---- COMMON ----
-    // Possible Errors
+    // ---- Possible Errors ----
     "no-console": 1,
     "no-alert": 1,
     "no-extra-parens": 2,
     "no-prototype-builtins": 2,
     "no-regex-spaces": 1,
-    "no-template-curly-in-string": 2, // es6
+    "no-template-curly-in-string": 2, // ES6
     "no-unsafe-negation": 2,
     "valid-jsdoc": 1,
-    // Best Practices
+
+    // ---- Best Practices ----
     "accessor-pairs": 2,
     "consistent-return": 2,
     "block-scoped-var": 2,
@@ -44,7 +45,7 @@ module.exports = {
     "no-caller": 1,
     "no-else-return": 2,
     "no-empty-function": 2,
-    "no-empty-pattern": 2, // es6
+    "no-empty-pattern": 2, // ES6
     "no-eq-null": 2,
     "no-eval": 2,
     "no-extra-bind": 2,
@@ -54,7 +55,7 @@ module.exports = {
     "no-implicit-globals": 2,
     "no-implied-eval": 2,
     "no-invalid-this": 2,
-    "no-labels": 2, // no need "no-extra-label"
+    "no-labels": 2, // No need "no-extra-label"
     "no-lone-blocks": 2,
     "no-loop-func": 2,
     "no-magic-numbers": 2,
@@ -94,7 +95,8 @@ module.exports = {
       "error",
       "inside",
     ],
-    // Variables
+
+    // ---- Variables ----
     "init-declarations": [
       "warn",
       "always",
@@ -107,6 +109,7 @@ module.exports = {
     // "no-undef-init": 2,
     "no-undefined": 2,
     "no-use-before-define": 2,
+
     // ---- Node.js and CommonJS ----
     "callback-return": 2,
     "global-require:": 0,
@@ -114,9 +117,99 @@ module.exports = {
     "no-mixed-requires": 2,
     "no-new-require": 2,
     "no-path-concat": 2,
-    // Stylistic Issues
 
-    "no-restricted-syntax":[
+    // ---- Stylistic Issues ----
+    "array-bracket-spacing": [
+      "error",
+      "never",
+    ],
+    "block-spacing": [
+      "error",
+      "always",
+    ],
+    "brace-style": 2,
+    "camelcase": 0,
+    "capitalized-comments": [
+      "error",
+      "always",
+    ],
+    "comma-dangle": [
+      "error",
+      "always-multiline",
+    ],
+    "comma-spacing": [
+      "error",
+      {
+        "before": false,
+        "after": true,
+      },
+    ],
+    "comma-style": [
+      "error",
+      "first",
+      {
+        "exceptions": {
+          "ArrayExpression": true,
+          "ObjectExpression": true,
+        },
+      },
+    ],
+    "computed-property-spacing": [
+      "error",
+      "never",
+    ],
+    "consistent-this": [
+      "error",
+      "self",
+    ],
+    "eol-last": [
+      "error",
+      "always",
+    ],
+    "func-call-spacing": [
+      "error",
+      "never",
+    ],
+    "func-name-matching": [
+      "warn",
+      "always",
+    ],
+    "func-names": [
+      "error",
+      "as-needed",
+    ],
+    "func-style": [
+      "error",
+      "declaration",
+      {
+        "allowArrowFunctions": true,
+      },
+    ],
+    "jsx-quotes": [
+      "error",
+      "prefer-double",
+    ],
+    "key-spacing": [
+      "error",
+      {
+        "beforeColon": false,
+        "afterColon": true,
+        "mode": "strict",
+      },
+    ],
+    "keyword-spacing": [
+      "error",
+      {
+        "before": true,
+        "after": true,
+      },
+    ],
+
+    // ---- ECMAScript 6 ----
+    
+
+    // ---- Others ----
+    "no-restricted-syntax": [
       "error",
       "WithStatement",
     ],
