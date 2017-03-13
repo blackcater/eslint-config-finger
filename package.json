@@ -1,0 +1,33 @@
+{
+  "name": "eslint-config-finger",
+  "version": "0.0.1",
+  "description": "FFE's ESLint Configuration",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm link & npm link eslint-config-finger"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blackcater/eslint-config-finger.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "react",
+    "es6",
+    "es2015",
+    "es7"
+  ],
+  "author": "blackcater",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blackcater/eslint-config-finger/issues"
+  },
+  "homepage": "https://github.com/blackcater/eslint-config-finger#readme",
+  "peerDependencies": {
+    "eslint": "^3.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.17.1"
+  }
+}
