@@ -6,5 +6,3 @@
 // if (!("str" in obj)) {
 //   // empty
 // }
-
-

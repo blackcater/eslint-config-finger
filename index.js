@@ -1,25 +1,25 @@
 /**
  * Normal configuration for javascript
- * 
+ *
  * 0: "off"
  * 1: "warn"
  * 2: "error"
  */
+const MAX_DEPTH = 4
+const MAX_NESTED_CALLBACKS = 3
+const MAX_PARAMS = 4
+
 module.exports = {
-  "extends": "eslint:recommended",
-  "ecmaVersion": 6,
-  "ecmaFeatures": {
-    "experimentalObjectRestSpread": true,
+  extends: "eslint:recommended",
+  ecmaVersion: 6,
+  ecmaFeatures: { experimentalObjectRestSpread: true },
+  env: {
+    browser: true,
+    node: true,
+    es6: true,
   },
-  "env": {
-    "browser": true,
-    "node": true,
-    "es6": true,
-  },
-  "parserOptions": {
-    "sourceType": "module",
-  },
-  "rules": {
+  parserOptions: { sourceType: "module" },
+  rules: {
     // ---- COMMON ----
     // ---- Possible Errors ----
     "no-console": 1,
@@ -27,7 +27,8 @@ module.exports = {
     "no-extra-parens": 2,
     "no-prototype-builtins": 2,
     "no-regex-spaces": 1,
-    "no-template-curly-in-string": 2, // ES6
+    // ES6
+    "no-template-curly-in-string": 2,
     "no-unsafe-negation": 2,
     "valid-jsdoc": 1,
 
@@ -45,7 +46,8 @@ module.exports = {
     "no-caller": 1,
     "no-else-return": 2,
     "no-empty-function": 2,
-    "no-empty-pattern": 2, // ES6
+    // ES6
+    "no-empty-pattern": 2,
     "no-eq-null": 2,
     "no-eval": 2,
     "no-extra-bind": 2,
@@ -55,7 +57,8 @@ module.exports = {
     "no-implicit-globals": 2,
     "no-implied-eval": 2,
     "no-invalid-this": 2,
-    "no-labels": 2, // No need "no-extra-label"
+    // No need "no-extra-label"
+    "no-labels": 2,
     "no-lone-blocks": 2,
     "no-loop-func": 2,
     "no-magic-numbers": 2,
@@ -78,8 +81,8 @@ module.exports = {
     "no-unused-expressions": [
       "error",
       {
-        "allowShortCircuit": true,
-        "allowTernary": true,
+        allowShortCircuit: true,
+        allowTernary: true,
       },
     ],
     // "no-unused-labels": 2,
@@ -97,10 +100,10 @@ module.exports = {
     ],
 
     // ---- Variables ----
-    "init-declarations": [
-      "warn",
-      "always",
-    ],
+    // "init-declarations": [
+    //   "warn",
+    //   "always",
+    // ],
     "no-catch-shadow": 2,
     "no-delete-var": 0,
     // "no-label-var": 2,
@@ -129,10 +132,6 @@ module.exports = {
     ],
     "brace-style": 2,
     "camelcase": 0,
-    "capitalized-comments": [
-      "error",
-      "always",
-    ],
     "comma-dangle": [
       "error",
       "always-multiline",
@@ -140,17 +139,17 @@ module.exports = {
     "comma-spacing": [
       "error",
       {
-        "before": false,
-        "after": true,
+        before: false,
+        after: true,
       },
     ],
     "comma-style": [
       "error",
       "first",
       {
-        "exceptions": {
-          "ArrayExpression": true,
-          "ObjectExpression": true,
+        exceptions: {
+          ArrayExpression: true,
+          ObjectExpression: true,
         },
       },
     ],
@@ -161,10 +160,6 @@ module.exports = {
     "consistent-this": [
       "error",
       "self",
-    ],
-    "eol-last": [
-      "error",
-      "always",
     ],
     "func-call-spacing": [
       "error",
@@ -181,9 +176,7 @@ module.exports = {
     "func-style": [
       "error",
       "declaration",
-      {
-        "allowArrowFunctions": true,
-      },
+      { allowArrowFunctions: true },
     ],
     "jsx-quotes": [
       "error",
@@ -192,26 +185,137 @@ module.exports = {
     "key-spacing": [
       "error",
       {
-        "beforeColon": false,
-        "afterColon": true,
-        "mode": "strict",
+        beforeColon: false,
+        afterColon: true,
+        mode: "strict",
       },
     ],
     "keyword-spacing": [
       "error",
       {
-        "before": true,
-        "after": true,
+        before: true,
+        after: true,
       },
     ],
-
-    // ---- ECMAScript 6 ----
-    
-
-    // ---- Others ----
+    "line-comment-position": [
+      "error",
+      { position: "above" },
+    ],
+    "lines-around-comment": [
+      "error",
+      {
+        beforeBlockComment: true,
+        afterBlockComment: false,
+        afterLineComment: false,
+        allowBlockStart: true,
+        allowBlockEnd: true,
+        allowObjectStart: true,
+        allowObjectEnd: true,
+        allowArrayStart: true,
+        allowArrayEnd: true,
+      },
+    ],
+    "max-depth": [
+      "error",
+      MAX_DEPTH,
+    ],
+    "max-nested-callbacks": [
+      "error",
+      MAX_NESTED_CALLBACKS,
+    ],
+    "max-params": [
+      "error",
+      MAX_PARAMS,
+    ],
+    "new-cap": [
+      "error",
+      {
+        newIsCap: true,
+        capIsNew: true,
+      },
+    ],
+    "new-parens": 2,
+    "newline-after-var": [
+      "error",
+      "always",
+    ],
+    "newline-before-return": 2,
+    "newline-per-chained-call": [
+      "error",
+      { ignoreChainWithDepth: 2 },
+    ],
+    "no-array-constructor": 2,
+    "no-lonely-if": 2,
+    "no-mixed-operators": [
+      "error",
+      { allowSamePrecedence: true },
+    ],
+    "no-new-object": 2,
     "no-restricted-syntax": [
       "error",
       "WithStatement",
     ],
+    "no-trailing-spaces": 2,
+    "no-underscore-dangle": [
+      "error",
+      {
+        allowAfterThis: true,
+        allowAfterSuper: true,
+      },
+    ],
+    "no-unneeded-ternary": 2,
+    "no-whitespace-before-property": 2,
+    "object-curly-newline": [
+      "error",
+      {
+        ObjectExpression: {
+          minProperties: 2,
+          multiline: true,
+        },
+        ObjectPattern: { minProperties: 4 },
+      },
+    ],
+    "object-curly-spacing": [
+      "error",
+      "always",
+    ],
+    "object-property-newline": [
+      "error", { allowMultiplePropertiesPerLine: true },
+    ],
+    "one-var": [
+      "error",
+      { uninitialized: "always" },
+    ],
+    "one-var-declaration-per-line": [
+      "error",
+      "initializations",
+    ],
+    "operator-assignment": [
+      "error",
+      "always",
+    ],
+    "operator-linebreak": [
+      "error",
+      "after",
+    ],
+    "padded-blocks": [
+      "error",
+      {
+        blocks: "never",
+        classes: "always",
+      },
+    ],
+    "quote-props": [
+      "error",
+      "consistent-as-needed",
+      {
+        keywords: true,
+        numbers: true,
+        unnecessary: false,
+      },
+    ],
+
+    // ---- ECMAScript 6 ----
+
   },
 }

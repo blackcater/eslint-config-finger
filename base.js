@@ -12,8 +12,10 @@ module.exports = {
   "rules": {
     "no-console": 1,
     "no-eval": 1,
-    "no-template-curly-in-string": 0, // es6
-    "no-empty-pattern": 0, // es6
+    // es6
+    "no-template-curly-in-string": 0,
+    // es6
+    "no-empty-pattern": 0,
     "no-implicit-globals": 0,
     "no-invalid-this": 0,
     "no-proto": 0,
@@ -26,7 +28,7 @@ module.exports = {
     "no-new-require": 2,
     "no-path-concat": 0,
 
-    "no-restricted-syntax":[
+    "no-restricted-syntax": [
       "error",
       "WithStatement",
     ],
