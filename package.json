@@ -18,6 +18,13 @@
     "es2015"
   ],
   "author": "blackcater",
+  "maintainers": [
+    {
+      "name": "blackcater",
+      "email": "blackcater2015@gmail.com",
+      "url": "https://github.com/blackcater"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/blackcater/eslint-config-finger/issues"
