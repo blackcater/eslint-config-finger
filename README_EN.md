@@ -1,6 +1,6 @@
 # eslint-config-finger
 
-[**Finger**](http://finger66.com/static/laptap/join.html)内部使用的，用于检测JavaScript代码
+It is used by [**Finger**](http://finger66.com/static/laptap/join.html)，for checking javascript code.
 
 <span><img src="http://forthebadge.com/images/badges/built-with-love.svg"></span>
 <span><img src="http://forthebadge.com/images/badges/makes-people-smile.svg"></span>
