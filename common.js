@@ -1,7 +1,5 @@
 /**
  * Basic Configuration, you can use it in any project
- *
- *
  */
 module.exports = {
   "extends": [
@@ -10,6 +8,10 @@ module.exports = {
     "./lib/partial/variables",
     "./lib/partial/stylistic",
   ].map(require.resolve),
+
+  "parseOptions": { "ecmaFeatures": { impliedStrict: true } },
+
+  "ecmaFeatures": { impliedStrict: true },
 
   "env": { browser: true },
 

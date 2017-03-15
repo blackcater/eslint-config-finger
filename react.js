@@ -1,5 +1,5 @@
 /**
- * If you use react
+ * Configuration for react and es6
  */
 module.exports = {
   "extends": [
