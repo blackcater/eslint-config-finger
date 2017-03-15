@@ -86,7 +86,7 @@ yarn add eslint eslint-config-finger --dev
 {
   "extends": "finger",
   "rules": {
-
+    // your own rules configuration
   }
 }
 ```
@@ -116,7 +116,9 @@ describe("OwnClass", () => {
 }
 ```
 
-这只是一个很常见的例子，`eslint`还有许多的环境参数，比如：`jasmine`, `jest`, `commonjs`, `prototypejs`等等。
+这只是一个很常见的例子。
+
+`eslint`还有许多的环境参数，比如：`jasmine`, `jest`, `commonjs`, `prototypejs`等等。
 
 具体请参见[Specifying Environments](http://eslint.org/docs/user-guide/configuring#specifying-environments)
 

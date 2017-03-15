@@ -15,8 +15,7 @@
     "eslintconfig",
     "react",
     "es6",
-    "es2015",
-    "es7"
+    "es2015"
   ],
   "author": "blackcater",
   "license": "MIT",
