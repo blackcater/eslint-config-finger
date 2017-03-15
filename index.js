@@ -1,25 +1,25 @@
 /**
  * Normal configuration for javascript
  *
- * 0: "off"
- * 1: "warn"
- * 2: "error"
+ * You can use it in any projects written with ES6 sytex
  */
 const MAX_DEPTH = 4
 const MAX_NESTED_CALLBACKS = 3
 const MAX_PARAMS = 4
 
 module.exports = {
-  extends: "eslint:recommended",
-  ecmaVersion: 6,
-  ecmaFeatures: { experimentalObjectRestSpread: true },
-  env: {
+  "extends": "eslint:recommended",
+  "env": {
     browser: true,
     node: true,
     es6: true,
   },
-  parserOptions: { sourceType: "module" },
-  rules: {
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": { experimentalObjectRestSpread: true },
+  },
+  "rules": {
     // ---- COMMON ----
     // ---- Possible Errors ----
     "no-console": 1,
@@ -111,7 +111,23 @@ module.exports = {
     "no-shadow-restricted-names": 2,
     // "no-undef-init": 2,
     "no-undefined": 2,
-    "no-use-before-define": 2,
+    "no-use-before-define": [
+      "error",
+      {
+        "functions": false,
+        "classes": false,
+        "variables": true,
+      },
+    ],
+    "no-unused-vars": [
+      "error",
+      {
+        "vars": "local",
+        "args": "all",
+        "caughtErrors": "none",
+        "ignoreRestSiblings": true,
+      },
+    ],
 
     // ---- Node.js and CommonJS ----
     "callback-return": 2,
@@ -307,15 +323,133 @@ module.exports = {
     ],
     "quote-props": [
       "error",
-      "consistent-as-needed",
+      "as-needed",
       {
         keywords: true,
         numbers: true,
         unnecessary: false,
       },
     ],
+    "quotes": [
+      "error",
+      "double",
+    ],
+    "require-jsdoc": [
+      "error",
+      {
+        "require": {
+          "FunctionDeclaration": true,
+          "MethodDefinition": true,
+          "ClassDeclaration": true,
+          "ArrowFunctionExpression": false,
+        },
+      },
+    ],
+    "semi": [
+      "error",
+      "never",
+    ],
+    "semi-spacing": [
+      "error", {
+        "before": false,
+        "after": true,
+      },
+    ],
+    "space-before-blocks": [
+      "error",
+      "always",
+    ],
+    "space-before-function-paren": 2,
+    "space-in-parens": [
+      "error",
+      "never",
+    ],
+    "space-infix-ops": [
+      "error",
+      { "int32Hint": true },
+    ],
+    "space-unary-ops": 2,
+    "spaced-comment": [
+      "error",
+      "always",
+      {
+        "line": { "exceptions": ["="] },
+        "block": {
+          "exceptions": ["*"],
+          "balanced": true,
+        },
+      },
+    ],
+    // es6
+    "template-tag-spacing": 2,
+    "wrap-regex": 2,
 
     // ---- ECMAScript 6 ----
-
+    "arrow-body-style": [
+      "error",
+      "as-needed",
+    ],
+    "arrow-parens": [
+      "error",
+      "always",
+    ],
+    "arrow-spacing": 2,
+    "constructor-super": 2,
+    "generator-star-spacing": [
+      "error",
+      {
+        "before": true,
+        "after": false,
+      },
+    ],
+    "no-class-assign": 2,
+    "no-confusing-arrow": [
+      "error",
+      { "allowParens": true },
+    ],
+    "no-const-assign": 2,
+    "no-dupe-class-members": 2,
+    "no-duplicate-imports": 2,
+    "no-new-symbol": 2,
+    // "no-this-before-super": 2,
+    "no-useless-computed-key": 2,
+    "no-useless-constructor": 2,
+    "no-useless-rename": 2,
+    "no-var": 2,
+    "object-shorthand": 2,
+    "prefer-arrow-callback": 2,
+    "prefer-const": [
+      "error",
+      {
+        "destructuring": "all",
+        "ignoreReadBeforeAssign": true,
+      },
+    ],
+    "prefer-destructuring": [
+      "error",
+      {
+        "array": true,
+        "object": true,
+      },
+      { "enforceForRenamedProperties": false },
+    ],
+    "prefer-numeric-literals": 2,
+    "prefer-rest-params": 2,
+    "prefer-spread": 2,
+    "prefer-template": 2,
+    "require-yield": 2,
+    "rest-spread-spacing": [
+      "error",
+      "never",
+    ],
+    "symbol-description": 2,
+    "template-curly-spacing": [
+      "error",
+      "never",
+    ],
+    "yield-star-spacing": [
+      "error",
+      "before",
+    ],
   },
 }

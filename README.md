@@ -1,11 +1,11 @@
 # eslint-config-finger
 
-## Install
+## 安装
 
-## Basic Usage
+## 基本使用
 
-## Advanced Usage
+## 高级使用
 
-## Best Practices
+## 最佳体验
 
-变量初始化
+## 常见问题
