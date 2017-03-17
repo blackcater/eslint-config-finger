@@ -12,12 +12,12 @@ English Doc. : [en](https://github.com/blackcater/eslint-config-finger/blob/mast
 
 ```shell
 # npm
-npm install eslint eslint-config-finger --save-dev
+npm install eslint-config-finger --save-dev
 
 ## OR
 
 #yarn
-yarn add eslint eslint-config-finger --dev
+yarn add eslint-config-finger --dev
 
 ```
 
