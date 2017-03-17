@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-finger",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "FFE's ESLint Configuration",
   "main": "index.js",
   "scripts": {
