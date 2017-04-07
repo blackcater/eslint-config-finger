@@ -46,6 +46,10 @@
 
 // /foo/.test()
 
-const arr = []
-const index = 10
-const [, c] = arr
+// const arr = []
+// const index = 10
+// const [, c] = arr
+
+// obj = {
+//   a: 1,
+// }
