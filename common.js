@@ -9,10 +9,6 @@ module.exports = {
     "./lib/partial/stylistic",
   ].map(require.resolve),
 
-  "parseOptions": { "ecmaFeatures": { impliedStrict: true } },
-
-  "ecmaFeatures": { impliedStrict: true },
-
   "env": { browser: true },
 
   "rules": {},
